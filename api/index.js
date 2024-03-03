@@ -24,7 +24,7 @@ mongoose
 
 //!Canlıya Alma
 
-const __dirname = path.resolve();
+// const __dirname = path.resolve();
 
 //! App Listen
 app.listen(3000, () => {
