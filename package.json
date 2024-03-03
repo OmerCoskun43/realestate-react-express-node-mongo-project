@@ -2,7 +2,7 @@
   "name": "realestate",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "server/index.js",
   "scripts": {
     "dev": "nodemon api/index.js",
     "start": "node api/index.js",
@@ -10,6 +10,9 @@
   },
   "keywords": [],
   "author": "",
+  "directories": {
+    "lib": "server"
+  },
   "license": "ISC",
   "dependencies": {
     "bcrypt": "^5.1.1",
