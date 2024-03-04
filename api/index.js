@@ -47,15 +47,7 @@ app.use("/api/listing", listingRouter);
 //   res.sendFile(path.join("frontEnd", "index.html"));
 // });
 
-app.use(
-  express.static(path.join(__dirname, "../frontEnd"), {
-    setHeaders: (res, path, stat) => {
-      if (path.endsWith(".jsx")) {
-        res.set("Content-Type", "text/javascript");
-      }
-    },
-  })
-);
+app.use(express.static(path.join(__dirname, "../frontEnd")));
 
 app.get("*", (req, res) => {
   res.sendFile(path.join(__dirname, "..", "frontEnd", "index.html"));
