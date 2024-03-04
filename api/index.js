@@ -43,11 +43,14 @@ app.use("/api/listing", listingRouter);
 // app.get("*", (req, res) => {
 //   res.sendFile(path.join("/frontEnd", "index.html"));
 // });
+// app.get("*", (req, res) => {
+//   res.sendFile(path.join("frontEnd", "index.html"));
+// });
 
 app.use(express.static("frontEnd"));
 
 app.get("*", (req, res) => {
-  res.sendFile(path.join("frontEnd", "index.html"));
+  res.sendFile(path.join(__dirname, "frontEnd", "index.html"));
 });
 
 //! Error middleware
