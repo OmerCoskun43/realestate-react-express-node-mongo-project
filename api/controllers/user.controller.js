@@ -1,4 +1,4 @@
-const bycrypt = require("bcrypt");
+const bycrypt = require("bcryptjs");
 const errorHandler = require("../utils/error").errorHandler;
 const User = require("../models/user.model");
 const Listing = require("../models/listing.model");
