@@ -36,21 +36,12 @@ app.use("/api/user", userRouter);
 app.use("/api/auth", authRouter);
 app.use("/api/listing", listingRouter);
 
-// app.use(express.static(path.join(__dirname, "/frontEnd/dist")));
-
-// app.use(express.static("/frontEnd"));
-
-// app.get("*", (req, res) => {
-//   res.sendFile(path.join("/frontEnd", "index.html"));
-// });
-// app.get("*", (req, res) => {
-//   res.sendFile(path.join("frontEnd", "index.html"));
-// });
-
+// Frontend dosyalarını sunmak için
 app.use(express.static(path.join(__dirname, "../frontEnd")));
 
+// Tüm istekleri index.html'e yönlendirmek için
 app.get("*", (req, res) => {
-  res.sendFile(path.join(__dirname, "..", "frontEnd", "index.html"));
+  res.sendFile(path.join(__dirname, "../frontEnd", "index.html"));
 });
 
 //! Error middleware
