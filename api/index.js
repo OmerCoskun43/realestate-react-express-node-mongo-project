@@ -38,10 +38,10 @@ app.use("/api/listing", listingRouter);
 
 // app.use(express.static(path.join(__dirname, "/frontEnd/dist")));
 
-app.use(express.static(path.join(__dirname, "/frontEnd")));
+app.use(express.static("/frontEnd"));
 
 app.get("*", (req, res) => {
-  res.sendFile(path.join(__dirname, "frontEnd", "index.html"));
+  res.sendFile(path.join("frontEnd", "index.html"));
 });
 
 //! Error middleware
