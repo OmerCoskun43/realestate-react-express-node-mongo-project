@@ -2,17 +2,14 @@
   "name": "realestate",
   "version": "1.0.0",
   "description": "",
-  "main": "api/index.js",
+  "main": "index.js",
   "scripts": {
-    "dev": "nodemon api/index.js",
-    "start": "node api/index.js",
+    "dev": "nodemon index.js",
+    "start": "node index.js",
     "build": "npm install && npm install --prefix client && npm run build --prefix client"
   },
   "keywords": [],
   "author": "",
-  "directories": {
-    "lib": "api"
-  },
   "license": "ISC",
   "dependencies": {
     "bcrypt": "^5.1.1",
