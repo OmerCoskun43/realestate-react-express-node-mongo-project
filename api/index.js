@@ -37,15 +37,7 @@ app.use("/api/auth", authRouter);
 app.use("/api/listing", listingRouter);
 
 // Frontend dosyalarını sunmak için
-app.use(
-  express.static(path.join(__dirname, "../frontEnd"), {
-    setHeaders: (res, path, stat) => {
-      if (path.endsWith(".jsx")) {
-        res.setHeader("Content-Type", "text/javascript");
-      }
-    },
-  })
-);
+app.use(express.static(path.join(__dirname, "../frontEnd")));
 
 // Tüm istekleri index.html'e yönlendirmek için
 app.get("*", (req, res) => {
